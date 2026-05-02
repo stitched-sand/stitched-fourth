@@ -16,6 +16,19 @@ a {
   text-decoration: none;
 }
 
+p{
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.purple{
+   color: #6415ff;
+}
+
+button{
+    cursor: pointer;
+}
+
 /* LANDING */
 
 #landing {
@@ -112,4 +125,95 @@ nav {
 
 .login{
     margin-left: 48px;
+}
+
+.container{
+    padding: 96px 0;
+    
+}
+
+header .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__description{
+    width: 40%;
+    
+}
+
+h1{
+    font-size: 48px;
+    color: #1a202c
+    line-height: 1.25;
+    display: block;
+}
+
+.header__img--wrapper{
+    width: 60%;
+}
+
+.header__description--para{
+    font-size: 18px;
+    margin: 32px 0;
+}
+
+.header__email{
+    display: flex;
+    width: 100%;
+    max-width: 448px;
+    height: 68px;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.header__email--input{
+    width: 100%;
+    border-radius: 500px;
+    border: 20px solid rgb(229, 231, 235);
+    padding: 20px 192px 20px 32px;
+    color: rgb(36,62,99);
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: border-color 300ms;
+}
+
+input::placeholder{
+white-space-collapse: preserve;
+text-wrap-mode: nowrap;
+overflow-wrap: normal;
+overflow-x: hidden;
+overflow-y: hidden;
+line-height: initial;
+}
+
+::placeholder {
+-webkit-text-security: none;
+color: darkgray;
+direction: inherit;
+pointer-events: none;
+text-orientation: inherit;
+writing-mode: inherit;
+position: static;
+}
+
+.header__email--btn{
+    z-index: 2;
+    margin: 8px; 
+    height: calc(100%-16px);
+    border-radius: 500px;
+    width: 160px;
+    border: none;
+    background-color: #6415ff;
+    color: #fff;
+    font-weight: 700px;
+    font-size: 16px;
+    transition: all 300ms ease;
 }
