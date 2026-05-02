@@ -16,6 +16,15 @@ a {
   text-decoration: none;
 }
 
+h2{
+display: block;
+font-size: 1.5em;
+margin-top: 0.83em;
+margin-bottom: 0.83em;
+margin-left: 0px;
+font-weight: bold;
+}
+
 p{
     line-height: 1.5;
     font-size: 18px;
@@ -128,8 +137,7 @@ nav {
 }
 
 .container{
-    padding: 96px 0;
-    
+    padding: 60px 0;
 }
 
 header .row{
@@ -145,13 +153,30 @@ header .row{
 
 h1{
     font-size: 48px;
-    color: #1a202c
+    color: #1a202c;
     line-height: 1.25;
     display: block;
 }
 
 .header__img--wrapper{
-    width: 60%;
+    width: calc(60%);
+}
+
+figure {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+.header__img{
+    width: 100%;
+    max-width: 768px;
+    
+}
+
+img {
+    width: 100%;
 }
 
 .header__description--para{
@@ -173,7 +198,7 @@ h1{
 .header__email--input{
     width: 100%;
     border-radius: 500px;
-    border: 20px solid rgb(229, 231, 235);
+    border: 2px solid rgb(229, 231, 235);
     padding: 20px 192px 20px 32px;
     color: rgb(36,62,99);
     font-size: 16px;
@@ -185,23 +210,9 @@ h1{
     transition: border-color 300ms;
 }
 
-input::placeholder{
-white-space-collapse: preserve;
-text-wrap-mode: nowrap;
-overflow-wrap: normal;
-overflow-x: hidden;
-overflow-y: hidden;
-line-height: initial;
-}
-
-::placeholder {
--webkit-text-security: none;
-color: darkgray;
-direction: inherit;
-pointer-events: none;
-text-orientation: inherit;
-writing-mode: inherit;
-position: static;
+input::placeholder {
+  color: darkgray;
+  opacity: 1; 
 }
 
 .header__email--btn{
@@ -214,6 +225,120 @@ position: static;
     background-color: #6415ff;
     color: #fff;
     font-weight: 700px;
+    padding: 15px 20px;
     font-size: 16px;
     transition: all 300ms ease;
+}
+
+.header__customer--title{
+    margin-top: 65px;
+    font-size: 12px;
+    color: #a0aec0;
+    font-weight: 700;
+    letter-spacing: 0.6;
+}
+
+.header__customers{
+    margin-top: 16px;
+    opacity: 0.5;
+    padding-right: 60px;
+}
+
+/* FEATURES */
+
+#feature{
+    position: relative;
+}
+
+.row__narrow{
+
+}
+
+#features .row__narrow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row__narrow{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.section__tag{
+    color:rgb(100, 21, 255);
+    font-size: 16px;
+    font-weight:700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.section__title{
+    font-size: 48px;
+    font-weight: 900;
+    color: rgb(36,62,99);
+    line-height: 1.5;
+    margin: 16px 0;
+    letter-spacing: 0.025em;
+}
+
+#features .section__title, #pricing .section__title{
+    text-align: center;
+}
+
+#features .section__para{
+    text-align: center;
+    max-width: 576px;
+}
+
+.section__para{
+    font-size: 18px;
+    font-weight: 500;
+    color: #7c8ba1;
+    line-height: 1.625;
+}
+
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px
+
+}
+
+.feature{
+    width: calc(100%/3);
+}
+
+.feature__row{
+    display: flex;
+    padding: 32px 24px;
+    align-items: flex-start;
+    
+}
+
+.feature__img--wrapper{
+    display: flex;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 500px;
+}
+
+.feature__img{
+    width: 24px;
+    height: 24px;
+}
+
+.feature__text{
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+.feature__para{
+    margin-top: 16px;
+  line-height: 2;
+  font-size: 16px;  
+  color: rgb(124, 139, 161);
+  font-weight: 500;
+  max-width: calc(634px/3);
 }
