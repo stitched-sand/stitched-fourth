@@ -522,13 +522,28 @@ foreignObject {
 .steps__img--wrapper {
   display: flex;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .steps__img {
   margin: 0 36px;
   position: relative;
+  z-index: 1;
 }
+
+.steps__grid {
+position: absolute;
+bottom: -100px;
+left: 55%;
+transform: translateX(-50%);
+width: 10rem;
+height: 10rem;
+opacity: 0.7;
+z-index: 0;
+color: rgb(100, 21, 255);
+fill: currentColor;
+}
+
 
 .steps__description {
   padding: 32px 0;
@@ -931,9 +946,18 @@ button {
 .testimonial__para {
   margin-top: 1rem;
   margin-bottom: 2rem;
-  font-weight: 55;
+  font-weight: 500;
   font-size: 16px;
   color: rgb(74 85 104);
+}
+
+.divider {
+margin-top: 0.75rem;
+margin-bottom: 0.75rem;
+border-right-width: 1px;
+width: 0.5px;
+background-color: #edf2f7;
+height: 20px;
 }
 
 .testimonial__bottom {
@@ -1057,6 +1081,7 @@ foreignObject {
   padding: 96px 0;
   width: 100%;
   background-color: rgb(100, 21, 255);
+  border-radius: 8px;
 }
 
 .start__row {
@@ -1292,7 +1317,7 @@ svg {
   background-color: rgba(203, 213, 224);
 }
 
-/* DESKTOP/LAPTOP */
+/* DESKTOP, LAPTOP */
 
 @media (max-width: 1024px) {
   .btn__menu {
@@ -1305,7 +1330,7 @@ svg {
     flex-direction: column;
     align-items: center;
   }
-  header .description {
+  .header__description {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1317,4 +1342,149 @@ svg {
   .header__description--para {
     margin: 20px 0;
   }
+
+  .header__description,
+  .header__img--wrapper {
+    width: 100%;
+    max-width: 512px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__customers--title,
+  .header__img--wrapper {
+    margin-top: 48px;
+  }
+
+  .features {
+    justify-content: center;
+
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    width: auto;
+    max-width: 384px;
+  }
+
+  .feature__row {
+    padding: 32px 8px;
+    margin: 0 16px;
+  }
+
+  .quality__description {
+    margin-right: 0px;
+    padding-right: 48px;
+    margin-left: 24px;
+  }
+
+  .section__title {
+    font-size: 36px;
+  }
+
+  .section__para {
+    font-size: 16px;
+  }
+
+  #steps .row {
+    padding: 0 24px;
+  }
+
+  .steps__description {
+    padding-left: 32px;
+  }
+
+  .steps__img {
+    margin: 0 16px;
+  }
+
+  .steps__grid {
+    height: 5rem;
+    width: 5rem;
+    bottom: -50px;
+  }
+
+  .values__list{
+    max-width: 20rem;
+    flex-direction: column;
+  }
+
+  .value{
+    margin-top: 2.5rem;
+  }
+    #values .row {
+    padding: 0 24px;
+  }
+
+  #pricing .section__title, #features .section__title{
+    font-size: 48px;
+  }
+
+  .plans{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #testimonials .container{
+    padding: 5rem 2rem;
+  }
+
+  .testimonials__img{
+    width: 40%;
+  }
+
+  .testimonials__description{
+    padding-left: 48px;
+    width: 60%;
+  }
+
+  #start .container{
+    padding: 5rem 2rem;
+  }
+
+  .start__row{
+    flex-direction: column;
+  }
+
+  .start__title{
+    text-align: center;
+    width: 100%;
+    max-width: 512px;
+  }
+
+  .start__buttons{
+    margin-top: 24px;
+    width: auto;
+  }
+
+  .start__button{
+    padding: 16px 32px;
+  }
+
+  footer{
+    padding: 80px 32px;
+  }
+}
+
+/* SMALL PHONES, TABLETS */
+
+@media (max-width: 648px){
+    
+    nav{
+        padding-top: 24px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav__logo{
+        margin: 20px 0 8px 0;
+        padding-bottom: 4px;
+    }
+
+    .nav__row{
+        padding-top:24px;
+    }
 }
