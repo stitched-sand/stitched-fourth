@@ -1696,7 +1696,23 @@ margin-right: 0px;
 .plan__button {
 width: 100%;
 display: block;
+max-width: none;
 }
+
+.plan__price{
+    font-size: 36px;
+}
+
+.plan__bottom {
+  padding: 2rem 0px;
+  width: 100%;
+}
+
+.testimonials__description{
+    margin-top: 36px;
+    padding-left: 0;
+}
+
 
 
 
